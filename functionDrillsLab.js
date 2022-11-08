@@ -271,6 +271,7 @@ function bigOrSmall(bigOrSmallArray) {
 }
 //probing that code works
 console.log(bigOrSmall(bigOrSmallArray));
+
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = [
   "Katniss",
@@ -290,7 +291,15 @@ let loser = "Glimmer";
 */
 
 //CODE HERE
-
+function theEliminator(contestants, loser) {
+  for (let i = 0; i < contestants.length; i++) {
+    if (contestants[i] === loser) {
+      contestants.splice(1, 3);
+    }
+  }
+  return contestants;
+}
+console.log(theEliminator(contestants));
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo.";
 /*
@@ -299,6 +308,10 @@ let sampleString = "Hi, my name is Kylo.";
 */
 
 //CODE HERE
+function upperCaseString(sampleString) {
+  console.log(sampleString.toUpperCase());
+}
+upperCaseString(sampleString);
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
@@ -310,7 +323,15 @@ let sampleString = "Hi, my name is Kylo.";
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
 */
-
+function emailCheck(email) {
+  email = String(email.trim());
+  if (email.includes("@")) {
+    console.log("email verifed");
+  } else {
+    console.log("must provide a valid email address");
+  }
+}
+emailCheck("hello@hello.com");
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -318,6 +339,13 @@ let sampleString = "Hi, my name is Kylo.";
 */
 
 //CODE HERE
+function buyer(gold) {
+  ChocoFrogs = 3;
+  return gold / ChocoFrogs;
+}
+let totalFrogs = buyer(12);
+//probing the code works
+console.log(totalFrogs);
 
 ////////////////// PROBLEM 20 ////////////////////
 /*
@@ -325,6 +353,13 @@ let sampleString = "Hi, my name is Kylo.";
 */
 
 //CODE HERE
+function buyer2(gold) {
+  ChocoFrogs = 3;
+  return gold / ChocoFrogs;
+}
+
+let totalFrogs2 = buyer(4);
+console.log(Math.trunc(totalFrogs2));
 
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0, 1, 2, 3, 4, 7, 5, 6, 8, 9];
@@ -333,7 +368,16 @@ let sampleArray = [0, 1, 2, 3, 4, 7, 5, 6, 8, 9];
 */
 
 //CODE HERE
-
+function arrayComparison(sampleArray) {
+  for (i = 0; i < sampleArray.length - 1; i++) {
+    if (sampleArray[i + 1] < sampleArray[i]) {
+      return false;
+    }
+  }
+  return true;
+}
+let arrayIsAscending = arrayComparison(sampleArray);
+console.log(arrayIsAscending);
 ////////////////// PROBLEM 22 ////////////////////
 
 let duck = "cute";
