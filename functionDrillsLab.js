@@ -4,7 +4,6 @@
   feel free to practice with any syntax.
 */
 
-
 ////////////////// PROBLEM 1 ////////////////////
 /*
   Create a function called helloWorld which simply console logs 'Hello, World!'
@@ -12,8 +11,11 @@
 */
 
 //CODE HERE
+function helloWorld(word) {
+  console.log(word);
+}
 
-
+helloWorld("Hello World");
 ////////////////// PROBLEM 2 ////////////////////
 
 /*
@@ -21,7 +23,9 @@
 */
 
 //CODE HERE
-
+const jsNinja = () => {
+  return "I am a Javascript ninja";
+};
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -31,7 +35,11 @@
 */
 
 //CODE HERE
+function printName(personName) {
+  console.log(personName);
+}
 
+printName("Erick");
 
 ////////////////// PROBLEM 4 ////////////////////
 /*
@@ -44,8 +52,10 @@
 */
 
 //CODE HERE
-
-
+function greeting(name) {
+  console.log(`Hello ${name}`);
+}
+greeting("Jake");
 ////////////////// PROBLEM 5 ////////////////////
 
 /*
@@ -58,8 +68,16 @@
 */
 
 //CODE HERE
-
-
+const compareNums = (num1, num2) => {
+  if (num1 > num2) {
+    return num1;
+  } else if (num1 === num2) {
+    return num1;
+  } else {
+    return num2;
+  }
+};
+compareNums(1, 10);
 ////////////////// PROBLEM 6 ////////////////////
 /*
   Create a function called add that takes in two parameters 
@@ -69,7 +87,14 @@
 */
 
 //CODE HERE
+function add(x, y) {
+  x = parseInt(x);
+  y = parseInt(y);
+  return x + y;
+}
 
+let sum = add(15, 10);
+console.log(sum);
 
 ////////////////// PROBLEM 7 ////////////////////
 
@@ -78,15 +103,13 @@
   Uncomment the correct `console.log` underneath.
 */
 
-const exclaim = function(str) {
-  return str.toUpperCase() + '!!!'
-}
+const exclaim = function (str) {
+  return str.toUpperCase() + "!!!";
+};
 
 // console.log('arrow')
 // console.log('declaration')
-// console.log('expression')
-
-
+console.log("expression");
 
 ////////////////// PROBLEM 8 ////////////////////
 
@@ -95,11 +118,11 @@ const exclaim = function(str) {
   Uncomment the correct `console.log` underneath.
 */
 
-const exclaimTwo = str => {
-  return str.toUpperCase() + '!!!'
-}
+const exclaimTwo = (str) => {
+  return str.toUpperCase() + "!!!";
+};
 
-// console.log('arrow')
+console.log("arrow");
 // console.log('declaration')
 // console.log('expression')
 
@@ -110,8 +133,6 @@ const exclaimTwo = str => {
   Brownie points if you use a template string
 */
 
-
-
 ////////////////// PROBLEM 9 ////////////////////
 
 /*
@@ -120,13 +141,12 @@ const exclaimTwo = str => {
 */
 
 function exclaimFour(str) {
-  return str.toUpperCase() + '!!!'
+  return str.toUpperCase() + "!!!";
 }
 
 // console.log('arrow')
-// console.log('declaration')
+console.log("declaration");
 // console.log('expression')
-
 
 ////////////////// PROBLEM 10 ////////////////////
 /*
@@ -138,7 +158,17 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
-
+function nameCheck(name) {
+  if (name === "Steven") {
+    return "what is up Steven";
+  } else if (name === "Bryan") {
+    return "Hey Brain";
+  } else {
+    return "Cool name " + name;
+  }
+}
+let nameGreeting = nameCheck("Erick");
+console.log(nameGreeting);
 
 ////////////////// PROBLEM 11 ////////////////////
 /*
@@ -151,10 +181,22 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
-
+function faveColorFinder(color) {
+  if (color === "red") {
+    return "red is a great color";
+  } else if (color === "green") {
+    return "green is a solid";
+  } else if (color === "black") {
+    return "so trendy";
+  } else {
+    return "you need to evaluate your favorite color choice";
+  }
+}
+let colorRating = faveColorFinder("red");
+console.log(colorRating);
 
 ////////////////// PROBLEM 12 ////////////////////
-let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
+let namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
 /*
   Create a function called printAllNames that takes in a single argument (an array of names).
   Using a for loop, iterate over that array and console log each name.
@@ -162,7 +204,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
+function printAllNames(namesArr) {
+  for (i = 0; i < namesArr.length; i++) {
+    console.log(namesArr[i]);
+  }
+}
+printAllNames(namesArr);
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -173,7 +220,14 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
+function thatsOdd(number) {
+  if (number % 2 === 0) {
+    console.log("that is not odd!");
+  } else {
+    console.log("That is odd indeed!");
+  }
+}
+let oddChecker = thatsOdd(1456);
 
 ////////////////// PROBLEM 14 ////////////////////
 
@@ -186,10 +240,13 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
+const bestMovie = (movie) => movie + " is the best movie ever";
+// probing is the function works consolelog it
+let moviename = bestMovie("Saw");
+console.log(moviename);
 
 ////////////////// PROBLEM 15 ////////////////////
-let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
+let bigOrSmallArray = [1, 101, 102, 2, 103, 4, 5, 6, 107];
 /* 
   Create a function called 'bigOrSmall' that takes in one parameter, 'arr',  which will be an array of numbers. 
   Inside of the bigOrSmall function, create a new array called 'answers'. 
@@ -201,10 +258,19 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 
 //CODE HERE
 
-
 ////////////////// PROBLEM 16 ////////////////////
-let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
-let loser = 'Glimmer'
+let contestants = [
+  "Katniss",
+  "Peeta",
+  "Fox-face",
+  "Glimmer",
+  "Cato",
+  "Rue",
+  "Thresh",
+  "Clove",
+  "Marvel",
+];
+let loser = "Glimmer";
 /*
   Write a function that is called theEliminator, which takes in two arguments, contestants (which will each be an array of strings), and loser (which will be a string).
   The function should loop over the array of contestant names. If the loser string appears in the array, splice it out. Return the new contestants array.
@@ -212,16 +278,14 @@ let loser = 'Glimmer'
 
 //CODE HERE
 
-
 ////////////////// PROBLEM 17 ////////////////////
-let sampleString = "Hi, my name is Kylo."
+let sampleString = "Hi, my name is Kylo.";
 /*
   Write a function that takes in one argument, a string. The function should then console.log that string, in entirely uppercase characters.
   Invoke the function, passing in the sampleString (above).
 */
 
 //CODE HERE
-
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
@@ -242,7 +306,6 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
-
 ////////////////// PROBLEM 20 ////////////////////
 /*
   You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
@@ -250,15 +313,13 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
-
 ////////////////// PROBLEM 21 ////////////////////
-let sampleArray = [0,1,2,3,4,7,5,6,8,9]
+let sampleArray = [0, 1, 2, 3, 4, 7, 5, 6, 8, 9];
 /*
   Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
 */
 
 //CODE HERE
-
 
 ////////////////// PROBLEM 22 ////////////////////
 
@@ -282,13 +343,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = [];
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = [];
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = [];
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = [];
