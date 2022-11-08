@@ -257,7 +257,20 @@ let bigOrSmallArray = [1, 101, 102, 2, 103, 4, 5, 6, 107];
 */
 
 //CODE HERE
-
+function bigOrSmall(bigOrSmallArray) {
+  let answers = [];
+  for (i = 0; i < bigOrSmallArray.length; i++) {
+    if (bigOrSmallArray[i] > 100) {
+      answers.push("big");
+    } else {
+      answers.push("small");
+    }
+  }
+  let arrayEvaluator = answers;
+  return arrayEvaluator;
+}
+//probing that code works
+console.log(bigOrSmall(bigOrSmallArray));
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = [
   "Katniss",
